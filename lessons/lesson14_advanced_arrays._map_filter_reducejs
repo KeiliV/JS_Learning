@@ -1,0 +1,39 @@
+//Advanced Arrays
+
+const array = [1, 2, 10, 16];
+const double = [];
+const newArray = array.forEach((num) => {
+  double.push(num * 2);
+});
+//forEach simply loops over something and does whatever the function says
+//VS with map it loops over each number and returns a new array
+
+// map, filter, reduce
+
+const mapArray = array.map((num) => {
+  return num * 2;
+});
+//with map you always need to return something
+//example, first it takes num 1, multiplies it by 2 and returns the value that gets put into mapArray
+//then moves on to second number etc
+
+//shorthand version of the above
+const mapArrayShort = array.map((num) => num * 2);
+
+//filter
+
+const filerArray = array.filter((num) => {
+  return num > 5;
+});
+
+const filterArrayShortForm = array.filter((num) => num > 5);
+
+console.log(filterArrayShortForm);
+
+//reduce
+
+const reduceArray = array.reduce((accumulator, num) => {
+  return accumulator + num;
+}, 0); //0 here is the default value we want the accumulator to start with
+
+console.log(reduceArray);
